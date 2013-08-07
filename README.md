@@ -17,7 +17,7 @@ To add the plugin to your page (you will also need jQuery added to your project)
     <script src = 'jq-growl.js' type = 'text/javascript'></script>
     <link rel = 'stylesheet' type = 'text/css' href = 'jq-growl.css' />
 
-### How to add jqGrowl messagess to the queue
+### Initializing jqGrowl
 
 Once the files above are added you are ready to start using it. First you need to initialize it. This is usually done on the document/ready event once all DOM elements have finished downloading:
 
@@ -35,7 +35,7 @@ Once the files above are added you are ready to start using it. First you need t
     
 The plugin is now initialized.
 
-### Sending a jqGrowl notifier message
+### How to add jqGrowl messagess to the queue
 
 Use the msg method to add a message to the queue.
 
