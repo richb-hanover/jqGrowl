@@ -33,7 +33,11 @@ Once the files above are added you are ready to start using it. First you need t
     });
     </script>
     
-The plugin is now initialized, let's use the msg method to add a message to the queue.
+The plugin is now initialized.
+
+### Sending a jqGrowl notifier message
+
+Use the msg method to add a message to the queue.
 
     $.jqGrowl.msg('This message was generated using jqGrowl, a jQuery plugin. This message can be customized to appear in any of the four screen corners.', 'Notification Message');
 
