@@ -1,4 +1,4 @@
-# How to install the jqGrowl plugin on your website
+## How to install the jqGrowl plugin on your website
 
 _Note: This README is an abbreviated version of the full page at: http://www.learnjquery.org/plugin/jq-growl/_
 
@@ -9,13 +9,15 @@ Download and include plugin resource files shown below to your web page. Place t
 * jq-g-icon.png - the message icon picture
 * jq-g-close.png - the close button
 
+### Add the plugin to your page
+
 To add the plugin to your page (you will also need jQuery added to your project):
 
     <script src = 'jquery.js' type = 'text/javascript'></script>
     <script src = 'jq-growl.js' type = 'text/javascript'></script>
     <link rel = 'stylesheet' type = 'text/css' href = 'jq-growl.css' />
 
-## How to add jqGrowl messagess to the queue
+### How to add jqGrowl messagess to the queue
 
 Once the files above are added you are ready to start using it. First you need to initialize it. This is usually done on the document/ready event once all DOM elements have finished downloading:
 
