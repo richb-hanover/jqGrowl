@@ -1,6 +1,6 @@
 # How to install the jqGrowl plugin on your website
 
-_ Note: This README is an abbreviated version of the full page at: http://www.learnjquery.org/plugin/jq-growl/_
+_Note: This README is an abbreviated version of the full page at: http://www.learnjquery.org/plugin/jq-growl/_
 
 Download and include plugin resource files shown below to your web page. Place the image files into the plugin directory together with the CSS file.
 
@@ -32,8 +32,7 @@ Once the files above are added you are ready to start using it. First you need t
     
 The plugin is now initialized, let's use the msg method to add a message to the queue.
 
-$.jqGrowl.msg('This message was generated using jqGrowl, a jQuery plugin. This message can be customized to appear in any of the four screen corners.',
-              'Notification Message');
+    $.jqGrowl.msg('This message was generated using jqGrowl, a jQuery plugin. This message can be customized to appear in any of the four screen corners.', 'Notification Message');
 
 Note: This plugin is still in beta, and may not work correctly in some browsers (probably older versions of IE). If you notice something please let me know, and I'll update the code.
 
