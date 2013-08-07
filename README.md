@@ -19,7 +19,8 @@ To add the plugin to your page (you will also need jQuery added to your project)
 
 Once the files above are added you are ready to start using it. First you need to initialize it. This is usually done on the document/ready event once all DOM elements have finished downloading:
 
-    <script type = "text/javascript">$(document).ready(function()
+    <script type = "text/javascript">
+    $(document).ready(function()
     {
         // Initialize the plugin and define queue location on the screen
         $.jqGrowl.init( {
