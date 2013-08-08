@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Testing the jqGrowl jQuery Plug-in</title>
+    <script type = 'text/javascript' src = 'http://code.jquery.com/jquery-1.10.2.min.js'></script>
+    <script type = 'text/javascript' src = 'jq-growl.js' ></script>
+    <link   type = 'text/css'        href= 'jq-growl.css' rel = 'stylesheet' />
+
+<script type = "text/javascript">
+$(document).ready(function()
+{
+    // Initialize the plugin and define queue location on the screen
+    $.jqGrowl.init( {
+        position: 'absolute',
+        bottom: '8px',
+        right: '8px'
+    }, 5000);
+});
+</script>
+
+</head>
+<body>
+
+<input type="button"
+       onclick = "$.jqGrowl.init( { right: '8px', bottom: '', top: '8px',left: ''}); $.jqGrowl.msg('This is the Test message', 'Growl!');  "
+       value="Growl!"/>
+<br />
+<input type = "button"
+       onclick = "$.jqGrowl.init( { right: '8px', bottom: '8px', top: '',left: ''}); $.jqGrowl.msg('This message was generated using jqGrowl, a jQuery plugin. This message can be customized to appear in any of the four screen corners.', 'Notification Message');"
+       value = "Lower right corner"/>
+
+
+</body>
+</html>

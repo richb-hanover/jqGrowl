@@ -35,9 +35,9 @@ Once the files above are added you are ready to start using it. First you need t
     
 The plugin is now initialized.
 
-### How to add jqGrowl messagess to the queue
+### How to add jqGrowl messages to the queue
 
-Use the msg method to add a message to the queue.
+Use the _msg_ method to add a message to the queue.
 
     $.jqGrowl.msg('This message was generated using jqGrowl, a jQuery plugin. This message can be customized to appear in any of the four screen corners.', 'Notification Message');
 
