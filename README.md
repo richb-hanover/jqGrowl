@@ -11,15 +11,24 @@ Download and include plugin resource files shown below to your web page. Place t
 
 ### Add the plugin to your page
 
-To add the plugin to your page (you will also need jQuery added to your project):
+To add the plugin to your page, include these CSS and Javascript files (you will also need jQuery added to your project):
 
-    <script src = 'jquery.js' type = 'text/javascript'></script>
-    <script src = 'jq-growl.js' type = 'text/javascript'></script>
-    <link rel = 'stylesheet' type = 'text/css' href = 'jq-growl.css' />
+    <script src='jquery.js'   type='text/javascript'></script>
+    <script src='jq-growl.js' type='text/javascript'></script>
+    <link   rel='stylesheet'  type='text/css' href = 'jq-growl.css' />
+    
+You must also add a _div_ with id of jqGrowlContainer, and a _ul_ of id jq-growl-clone to the HTML of the page. 
+
+    <!-- Growl HTML Begin //-->
+    <div id = "jqGrowlContainer"></div>
+    <!-- Blueprint CSS, used to clone messages, always hidden //-->
+    <ul id = "jq-growl-clone"><ul><li class = "title"></li><li class = "msg"></li><li class = "icon"></li><li class = "close"></li></ul></ul>
+    <!-- Growl HTML End //-->
 
 ### Initializing jqGrowl
 
-Once the files above are added you are ready to start using it. First you need to initialize it. This is usually done on the document/ready event once all DOM elements have finished downloading:
+Once the items above are added you are ready to start using it. First you need to initialize it. 
+This is usually done on the document/ready event once all DOM elements have finished downloading:
 
     <script type = "text/javascript">
     $(document).ready(function()
@@ -41,5 +50,7 @@ Use the _msg_ method to add a message to the queue.
 
     $.jqGrowl.msg('This message was generated using jqGrowl, a jQuery plugin. This message can be customized to appear in any of the four screen corners.', 'Notification Message');
 
-Note: This plugin is still in beta, and may not work correctly in some browsers (probably older versions of IE). If you notice something please let me know, and I'll update the code.
+Note: This plugin is still in beta. It has been tested with jQuery 1.10.2 and 2.0.3. 
+It may not work correctly in some browsers (probably older versions of IE). 
+If you notice something please let me know, and I'll update the code.
 
