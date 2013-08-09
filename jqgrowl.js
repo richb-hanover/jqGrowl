@@ -11,9 +11,9 @@ $.jqGrowl = {
 
     /* Instantiate the jqGrowlContainer and the list if they don't exist */
     makeGrowlContainer: function() {
-        if ($("#jqGrowlContainer").length == 0)  {       // Is the container instantiated? Make one if not...
-            $('body').append('<div id = "jqGrowlContainer"></div>');
-            $('body').append('<ul  id = "jq-growl-clone"><ul><li class = "jqgrowl-title"></li><li class = "jqgrowl-msg"></li><li class = "jqgrowl-icon"></li><li class = "jqgrowl-close"></li></ul></ul>');
+        if ($("#jqgrowlContainer").length == 0)  {       // Is the container instantiated? Make one if not...
+            $('body').append('<div id = "jqgrowlContainer"></div>');
+            $('body').append('<ul  id = "jqgrowlClone"><ul><li class = "jqgrowl-title"></li><li class = "jqgrowl-msg"></li><li class = "jqgrowl-icon"></li><li class = "jqgrowl-close"></li></ul></ul>');
         }
     },
 
@@ -21,7 +21,7 @@ $.jqGrowl = {
     init: function(corner, tout) {
 
         this.makeGrowlContainer();
-        $("#jqGrowlContainer").css(corner);
+        $("#jqgrowlContainer").css(corner);
         if (tout) {
             this.timeout = tout
         }
@@ -32,14 +32,14 @@ $.jqGrowl = {
         
         this.makeGrowlContainer();                  // instantiate the container & list if necessary
         // Store objects for reuse
-        var container = $("#jqGrowlContainer");
-        var clone = $("#jq-growl-clone");    
-        var tag = "#jqmg" + this.msg_ctr;
+        var container = $("#jqgrowlContainer");
+        var clone = $("#jqgrowlClone");
+        var tag = "#jqgrowlMsg" + this.msg_ctr;
         
         // Fade out after a period of time (3 sec. default)
         setTimeout(function() { $(tag).fadeOut(2000); }, this.timeout);
         
-        $("ul", clone).attr("id", "jqmg" + this.msg_ctr);
+        $("ul", clone).attr("id", "jqgrowlMsg" + this.msg_ctr);
         $("li.jqgrowl-title", clone).text(title);
         $("li.jqgrowl-msg", clone).text(message + "\nTimeout (ms): " + this.timeout);
                 
@@ -56,7 +56,7 @@ $.jqGrowl = {
     clear: function()
     {
         this.makeGrowlContainer();
-        $("#jqGrowlContainer").html("");
+        $("#jqgrowlContainer").html("");
     }
 };
 
