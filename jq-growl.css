@@ -1,11 +1,11 @@
 #jq-growl-clone { display: none; }
 #jqGrowlContainer ul { background: #ffffff; z-index:214748364  !important; display: block; position: relative; border: 1px solid gray; padding-top: 4px; padding-bottom: 4px; }
 #jqGrowlContainer ul li {  z-index:214748364  !important; display: block; font-size: 12px; font-family: Arial, sans-serif; }
-#jqGrowlContainer ul li.title {  z-index:214748364  !important;font-weight: bold; }
-#jqGrowlContainer ul li.icon {  z-index:214748364  !important;position: absolute; top: 4px; left: 4px; width: 32px; height: 32px; background: url('jq-g-icon.png?v=1') no-repeat; }
-#jqGrowlContainer ul li.msg {  z-index:214748364  !important;margin-right: 24px; color: gray; }
+#jqGrowlContainer ul li.jqgrowl-title {  z-index:214748364  !important;font-weight: bold; }
+#jqGrowlContainer ul li.jqgrowl-icon {  z-index:214748364  !important;position: absolute; top: 4px; left: 4px; width: 32px; height: 32px; background: url('jq-g-icon.png?v=1') no-repeat; }
+#jqGrowlContainer ul li.jqgrowl-msg {  z-index:214748364  !important;margin-right: 24px; color: gray; }
 
-#jqGrowlContainer ul li.close {  z-index:214748364  !important;position: absolute; top: 4px; right: 4px; width: 14px; height: 14px; background: url("jq-g-close.png") no-repeat; cursor: pointer; }
+#jqGrowlContainer ul li.jqgrowl-close {  z-index:214748364  !important;position: absolute; top: 4px; right: 4px; width: 14px; height: 14px; background: url("jq-g-close.png") no-repeat; cursor: pointer; }
 
 #jqGrowlContainer {
     position: absolute;

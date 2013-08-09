@@ -15,27 +15,21 @@ $(document).ready(function()
         position: 'absolute',
         bottom: '8px',
         right: '8px'
-    }, 5000);
+    }, 6000);
 });
 </script>
 
 </head>
 <body>
 	<h1>Test of jqGrowl</h1>
-	<p>Click either of these buttons to see the Growl-like notifier appear, then time out.</p>
-    <!-- Growl HTML Begin //-->
-    <div id = "jqGrowlContainer"></div>
-
-    <!-- Blueprint CSS, used to clone messages, always hidden //-->
-    <ul id = "jq-growl-clone"><ul><li class = "title"></li><li class = "msg"></li><li class = "icon"></li><li class = "close"></li></ul></ul>
-    <!-- Growl HTML End //-->
+	<p>Click either of these buttons to see the Growl-like notifier appear, then time out and fade away.</p>
 
 	<input type="button"
-       onclick="$.jqGrowl.init( { right: '8px', bottom: '', top: '8px',left: ''}); $.jqGrowl.msg('This is the Test message', 'Growl!');  "
+       onclick="$.jqGrowl.init( { right: '8px', bottom: '', top: '8px',left: ''}, 1000); $.jqGrowl.msg('This is a notification at the top, right corner', 'Growl!');  "
        value="Growl!"/>
 	<br />
 	<input type="button"
-       onclick="$.jqGrowl.init( { right: '8px', bottom: '8px', top: '',left: ''}); $.jqGrowl.msg('This message was generated using jqGrowl, a jQuery plugin. This message can be customized to appear in any of the four screen corners.', 'Notification Message');"
+       onclick="$.jqGrowl.init( { right: '', bottom: '8px', top: '',left: '8px'}); $.jqGrowl.msg('This message was generated using jqGrowl, a jQuery plugin. This message can be customized to appear in any of the four screen corners.', 'Notification Message');"
        value="Lower right corner"/>
 
 
