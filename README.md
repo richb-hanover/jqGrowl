@@ -13,29 +13,19 @@ Download and include plugin resource files shown below to your web page. Place t
 
 To add the plugin to your page, include these CSS and Javascript files (you will also need jQuery added to your project):
 
-    <script  src='jquery.js'   type='text/javascript'></script>
-    <script  src='jqgrowl.js' type='text/javascript'></script>
-    <link   href='jqgrowl.css' rel='stylesheet'  type='text/css' />
+    <script  src='jqgrowl.js'  type='text/javascript'></script>
+    <link   href='jqgrowl.css' type='text/css' rel='stylesheet' />
     
 ### Initializing jqGrowl
 
-Once the items above are added you are ready to start using it. First you need to initialize it. 
-This is usually done on the document/ready event once all DOM elements have finished downloading:
+The plugin (jgrowl.js) sets the default location (lower right) and timeout (3 seconds).
+You may call the _init_ method to change these parameters. Here are the default setting:
 
-    <script type = "text/javascript">
-    $(document).ready(function()
-    {
-        // Initialize the plugin and define queue location 
-        // and the time it dwells on the screen (in milliseconds)
-        $.jqGrowl.init( {
-            position: 'absolute',
-              bottom: '8px',
-               right: '8px'
-        }, 5000);
-    });
-    </script>
-    
-The plugin is now initialized.
+    $.jqGrowl.init( { position: 'absolute', bottom: '8px', right: '8px' }, 3000);
+
+You may also change the timeout by setting the value directly:
+
+    $.jqGrowl.timeout = 4000;
 
 ### How to add jqGrowl messages to the queue
 
