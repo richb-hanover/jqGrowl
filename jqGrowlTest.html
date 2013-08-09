@@ -15,23 +15,35 @@ $(document).ready(function()
         position: 'absolute',
         bottom: '8px',
         right: '8px'
-    }, 6000);
+    }, 3000);
 });
 </script>
 
 </head>
 <body>
 	<h1>Test of jqGrowl</h1>
-	<p>Click either of these buttons to see the Growl-like notifier appear, then time out and fade away.</p>
+	<p>Click  these buttons to see the Growl-like notifier appear, then fade away.
+        You can also set the timeout before it fades - default is 3000 msec (3 seconds).</p>
 
 	<input type="button"
-       onclick="$.jqGrowl.init( { right: '8px', bottom: '', top: '8px',left: ''}, 1000); $.jqGrowl.msg('This is a notification at the top, right corner', 'Growl!');  "
-       value="Growl!"/>
+       onclick="$.jqGrowl.init( { right: '8px', bottom: '', top: '8px',left: ''}); $.jqGrowl.msg('This is a notification at the top, right corner', 'Growl!');  "
+       value="Upper right corner"/>
 	<br />
 	<input type="button"
-       onclick="$.jqGrowl.init( { right: '', bottom: '8px', top: '',left: '8px'}); $.jqGrowl.msg('This message was generated using jqGrowl, a jQuery plugin. This message can be customized to appear in any of the four screen corners.', 'Notification Message');"
-       value="Lower right corner"/>
-
+       onclick="$.jqGrowl.init( { right: '', bottom: '8px', top: '',left: '8px'}); $.jqGrowl.msg('This is a notification at the bottom, left corner', 'Notification Message');"
+       value="Lower left corner"/>
+    <br />
+    <input type="button"
+           onclick="$.jqGrowl.msg('This is a notification at the same location as the previous one', 'Notification Message');"
+           value="Same location as before"/>
+    <br />
+    <input type="button"
+           onclick="$.jqGrowl.timeout = 1000;"
+           value="Set timeout to 1000 msec"/>
+    <br />
+    <input type="button"
+           onclick="$.jqGrowl.timeout = 6000;"
+           value="Set timeout to 6000 msec"/>
 
 </body>
 </html>
