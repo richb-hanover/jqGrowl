@@ -21,8 +21,16 @@
        value="Lower left corner"/>
     <br />
     <input type="button"
+        onclick="$.jqGrowl.init( { right: '8px', bottom: '', top: '8px',left: ''}); $.jqGrowl.msg('<b>Bold text</b><br /><i>Italics</i>', 'HTML List <i>(styled)</i>');"
+        value="HTML Styled Text"/>
+    <br />
+    <input type="button"
            onclick="$.jqGrowl.msg('This is a notification at the same location as the previous one', 'Notification Message');"
            value="Same location as before"/>
+    <br />
+    <input type="button"
+           onclick="$.jqGrowl.timeout = 0;"
+           value="Set timeout to 0 msec"/>
     <br />
     <input type="button"
            onclick="$.jqGrowl.timeout = 1000;"

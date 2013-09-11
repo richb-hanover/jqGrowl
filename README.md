@@ -26,10 +26,10 @@ To add the plugin to your page, include these CSS and Javascript files (you will
 
 ### Initializing jqGrowl
 
-The plugin (jgrowl.js) has a .ready() method that performs all initialization, setting the default location (lower right) and timeout (3 seconds).
+The plugin (jgrowl.js) has a .ready() method that performs all initialization, setting the default location (top right) and timeout (3 seconds).
 You may also call the _init()_ method at any time to change these parameters. Here are the default settings:
 
-    $.jqGrowl.init( { position: 'absolute', bottom: '8px', right: '8px' }, 3000);
+    $.jqGrowl.init( { position: 'absolute', top: '8px', right: '8px' }, 3000);
 
 You may also change the timeout globally by setting the value directly. Setting the timer to zero will keep the notification on screen until the close icon is clicked.
 
