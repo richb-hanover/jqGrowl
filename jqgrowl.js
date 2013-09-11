@@ -1,9 +1,9 @@
 $.jqGrowl = {
 
     /*
-    timeout before the notification fades; initialization code below will set to 3 seconds
-    User code can also set this with $.jqGrowl.timeout = xxxx;
-    */
+     timeout before the notification fades; initialization code below will set to 3 seconds
+     User code can also set this with $.jqGrowl.timeout = xxxx;
+     */
     timeout: 0,
 
     /* count of messages displayed - private */
@@ -28,27 +28,44 @@ $.jqGrowl = {
     },
 
     /* add a message */
-    msg: function(message, title) {
-        
+    msg: function(message, title, tout) {
+
         this.makeGrowlContainer();                  // instantiate the container & list if necessary
         // Store objects for reuse
         var container = $("#jqgrowlContainer");
         var clone = $("#jqgrowlClone");
         var tag = "#jqgrowlMsg" + this.msg_ctr;
-        
+        var theTimeout;
+        var timerId;
+
         // Fade out after a period of time (3 sec. default)
-        setTimeout(function() { $(tag).fadeOut(2000); }, this.timeout);
-        
+        theTimeout = this.timeout;
+        if (tout != null)   {                       // use default, unless user specifies one
+            theTimeout = tout;
+        }
+
+        timerId = null;
+        if (theTimeout != 0) {
+            timerId = setTimeout(function() { $(tag).fadeOut(2000); }, theTimeout);
+        }
+
         $("ul", clone).attr("id", "jqgrowlMsg" + this.msg_ctr);
-        $("li.jqgrowl-title", clone).text(title);
-        $("li.jqgrowl-msg", clone).text(message + "\nTimeout (ms): " + this.timeout);
-                
+        $("li.jqgrowl-title", clone).html(title);
+        $("li.jqgrowl-msg", clone).html(message);
+
         // Append this message to the queue
         container.append(clone.html());
-        
-        // Attach close button event
-        $(tag + " li.jqgrowl-close").on("click", function() { $(tag).fadeOut(300); });
 
+        // Attach close button events:
+        // - dim the close box
+        // - attach click() to close it in 300 msec
+        // - if hovered over, brighten the close box, and clear the timer so it stays on screen
+        $(tag + " li.jqgrowl-close").css("opacity", "0.25");
+        $(tag + " li.jqgrowl-close").click(function() { $(tag).fadeOut(300); });
+        $(tag).hover(
+            function() { $(tag + " li.jqgrowl-close").fadeTo(200, 1.0); clearTimeout(timerId); },
+            function() { }
+        );
         this.msg_ctr++;
     },
 
@@ -60,6 +77,8 @@ $.jqGrowl = {
     }
 };
 
+// initializer code - called when first loaded
+// Place notifier at top-right, and let it dwell for 3 seconds
 $(document).ready(function() {
-    $.jqGrowl.init( { position: 'absolute', bottom: '8px', right: '8px' }, 3000);
+    $.jqGrowl.init( { position: 'absolute', top: '8px', right: '8px' }, 3000);
 });

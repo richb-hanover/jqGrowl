@@ -5,7 +5,15 @@
 #jqgrowlContainer ul li.jqgrowl-icon {  z-index:214748364  !important;position: absolute; top: 4px; left: 4px; width: 32px; height: 32px; background: url('jqgrowl-icon.png?v=1') no-repeat; }
 #jqgrowlContainer ul li.jqgrowl-msg {  z-index:214748364  !important;margin-right: 24px; color: gray; }
 
-#jqgrowlContainer ul li.jqgrowl-close {  z-index:214748364  !important;position: absolute; top: 4px; right: 4px; width: 14px; height: 14px; background: url("jqgrowl-close.png") no-repeat; cursor: pointer; }
+#jqgrowlContainer ul li.jqgrowl-close {
+    z-index:214748364
+    !important;
+    position: absolute;
+    top: 4px; right: 4px;
+    width: 14px; height: 14px;
+    background: url("jqgrowl-close.png")
+    no-repeat; cursor: pointer;
+}
 
 #jqgrowlContainer {
     position: absolute;
