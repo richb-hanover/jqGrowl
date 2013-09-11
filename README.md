@@ -37,3 +37,7 @@ Note: This plugin is still in beta. It has been tested with jQuery 1.10.2 and 2.
 It may not work correctly in some browsers (probably older versions of IE). 
 If you notice something please let me know, and I'll update the code.
 
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/richb-hanover/jqgrowl/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
